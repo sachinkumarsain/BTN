@@ -1,0 +1,151 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+body{
+    background: #03001e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin:100px auto;
+    display: flex;
+    background-color: rgb(54, 100, 85);
+    flex-wrap: wrap;
+    height: 500px;
+    
+}
+.section{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25px;
+    border: 2px solid black;
+    
+}
+a{
+    
+    padding: 8px 20px;
+    background-color:gray;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    z-index:0;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    
+}
+h2{
+font-weight: 500;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.one{
+    box-shadow: 5px 5px rgb(64, 59, 59);
+}
+.section .one::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:-50%;
+    width: 50%;
+    height:100%;
+    background-color:black;
+    z-index:-1;
+    transition: all 1s ease;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+
+}
+.section .one:hover::before{
+    left: 0;
+    color: white;
+}
+.section .one::after{
+    content: "";
+    position: absolute;
+    top:0;
+    
+    right: -50%;
+    width: 50%;
+    height:100%;
+    background-color:black;
+    z-index:-1;
+    transition: all 1s ease;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.section .one:hover::after{
+    right: 0;
+
+   
+}
+.two::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 0px 5px rgb(45, 44, 44);
+    background-color: yellow;
+    border-radius: 5px;
+    transition: all 1s ease;
+    z-index: -1;
+}
+.two:hover::before{
+    top:0px;
+}
+.four{
+    box-shadow: 5px 5px rgb(64, 59, 59);
+}
+.four::before{
+     content: "";
+     position: absolute;
+     bottom: 100%;
+     right: 100%;
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     z-index: -1;
+     transition: all 1s ease;
+    background: #03001e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left , #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.four:hover::before{
+    transform: scale(4);
+}
+.three{
+    box-shadow: 5px 5px rgb(64, 59, 59);
+}
+.three::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    
+    top: 0px;
+    width: 15px;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: -1;
+    background: #00C9FF;
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);
+    background: linear-gradient(to right, #92FE9D, #00C9FF);
+    transform: rotate(10deg);
+}
+.three:hover::before{
+    left:110%
+}
